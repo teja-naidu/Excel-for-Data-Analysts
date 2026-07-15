@@ -126,3 +126,171 @@ This formula searches for the value in **A2** within column **D** and returns th
 The formulas covered in this guide form the foundation of Excel-based data analysis. Mastering these functions will help you perform calculations, summarize information, apply business logic, and retrieve data efficiently.
 
 In the next section, you'll learn additional Excel functions for working with text, dates, dynamic arrays, and financial calculations.
+
+---
+
+# Text Functions
+
+Text functions help clean, extract, combine, and format text values. These functions are especially useful when working with customer names, addresses, product descriptions, and imported datasets.
+
+| Function | Syntax | Description | Example |
+|----------|--------|-------------|---------|
+| LEFT | `=LEFT(A2,3)` | Returns characters from the left | Extract area code |
+| RIGHT | `=RIGHT(A2,4)` | Returns characters from the right | Last four digits |
+| MID | `=MID(A2,2,5)` | Extracts characters from the middle | Extract product code |
+| LEN | `=LEN(A2)` | Returns text length | Count characters |
+| TRIM | `=TRIM(A2)` | Removes extra spaces | Clean imported data |
+| UPPER | `=UPPER(A2)` | Converts text to uppercase | Standardize text |
+| LOWER | `=LOWER(A2)` | Converts text to lowercase | Email formatting |
+| PROPER | `=PROPER(A2)` | Capitalizes each word | Customer names |
+| CONCAT | `=CONCAT(A2,B2)` | Combines text | Full name |
+| TEXT | `=TEXT(A2,"dd-mmm-yyyy")` | Formats numbers or dates as text | Custom date format |
+
+### Example
+
+```excel
+=TRIM(A2)
+```
+
+This removes unnecessary spaces from imported or manually entered text.
+
+---
+
+# Date & Time Functions
+
+Date and time functions help analyze trends over days, months, quarters, and years.
+
+| Function | Syntax | Description | Example |
+|----------|--------|-------------|---------|
+| TODAY | `=TODAY()` | Returns today's date | Daily reports |
+| NOW | `=NOW()` | Returns current date and time | Timestamp |
+| YEAR | `=YEAR(A2)` | Extracts the year | Yearly analysis |
+| MONTH | `=MONTH(A2)` | Extracts the month | Monthly reports |
+| DAY | `=DAY(A2)` | Extracts the day | Daily analysis |
+| WEEKDAY | `=WEEKDAY(A2)` | Returns day of the week | Attendance analysis |
+| EDATE | `=EDATE(A2,3)` | Adds months to a date | Subscription renewal |
+| DATEDIF | `=DATEDIF(A2,B2,"D")` | Calculates date difference | Days between orders |
+
+### Example
+
+```excel
+=YEAR(A2)
+```
+
+This extracts the year from a date, making it useful for yearly reporting and trend analysis.
+
+---
+
+# Dynamic Array Functions
+
+Dynamic array functions automatically return multiple values without requiring manual copying of formulas.
+
+| Function | Syntax | Description | Example |
+|----------|--------|-------------|---------|
+| FILTER | `=FILTER(A2:C20,B2:B20="East")` | Filters matching records | Regional sales |
+| SORT | `=SORT(A2:C20)` | Sorts data | Alphabetical lists |
+| UNIQUE | `=UNIQUE(A2:A100)` | Returns unique values | Distinct customers |
+| SORTBY | `=SORTBY(A2:C20,C2:C20,-1)` | Sorts by another column | Highest sales first |
+| SEQUENCE | `=SEQUENCE(10)` | Generates sequential numbers | Auto numbering |
+
+### Example
+
+```excel
+=UNIQUE(A2:A100)
+```
+
+Returns all unique values from the selected range.
+
+---
+
+# Financial Functions
+
+Financial functions are useful for budgeting, forecasting, investment analysis, and loan calculations.
+
+| Function | Syntax | Description | Example |
+|----------|--------|-------------|---------|
+| PMT | `=PMT(rate,nper,pv)` | Calculates loan payment | EMI calculation |
+| FV | `=FV(rate,nper,pmt)` | Future value | Investment growth |
+| PV | `=PV(rate,nper,pmt)` | Present value | Investment analysis |
+| NPV | `=NPV(rate,values)` | Net Present Value | Project evaluation |
+
+### Example
+
+```excel
+=PMT(8%/12,60,-500000)
+```
+
+Calculates the monthly payment for a loan.
+
+---
+
+# Top 20 Formulas Every Data Analyst Should Know
+
+- SUM
+- AVERAGE
+- COUNTIF
+- COUNTIFS
+- IF
+- IFS
+- AND
+- OR
+- XLOOKUP
+- INDEX
+- MATCH
+- INDEX + MATCH
+- LEFT
+- RIGHT
+- TRIM
+- TEXT
+- TODAY
+- FILTER
+- UNIQUE
+- SORT
+
+---
+
+# Best Practices
+
+- Use **XLOOKUP** instead of **VLOOKUP** whenever possible.
+- Convert datasets into Excel Tables before applying formulas.
+- Use named ranges or structured references to improve readability.
+- Keep formulas simple and easy to audit.
+- Use `IFERROR()` to handle errors gracefully.
+- Lock cell references using **F4** when copying formulas.
+- Test formulas on a small dataset before applying them to large data.
+
+---
+
+# Common Mistakes
+
+- Hardcoding values instead of using cell references.
+- Forgetting to lock cell references with **F4**.
+- Using approximate lookups instead of exact matches.
+- Nesting too many IF statements when simpler alternatives exist.
+- Ignoring blank cells and error values.
+- Not documenting complex formulas for future reference.
+
+---
+
+# Who Should Learn These Functions?
+
+This guide is valuable for:
+
+- Data Analysts
+- Business Analysts
+- Financial Analysts
+- Reporting Analysts
+- Data Scientists
+- Students
+- Excel Beginners
+- Anyone working with data in Microsoft Excel
+
+---
+
+# Conclusion
+
+Excel formulas and functions are the foundation of efficient data analysis. Understanding when and how to use these functions allows you to clean data, perform calculations, retrieve information, and automate repetitive tasks with confidence.
+
+By mastering the formulas covered in this guide, you'll be better equipped to build reports, create dashboards, analyze business data, and solve real-world analytical problems more effectively.
+
+Happy Learning!
